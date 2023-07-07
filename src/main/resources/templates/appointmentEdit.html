@@ -21,23 +21,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active text-white " aria-current="page" href="appointment">Home</a>
+                    <a class="nav-link active text-white " aria-current="page" href="/appointment">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-white " aria-current="page" href="all_appointments">All Appointments</a>
+                    <a class="nav-link active text-white " aria-current="page" href="/all_appointments">All Appointments</a>
                 </li>
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link text-white" href="#">My Appointments </a>-->
-<!--                </li>-->
+                <!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link text-white" href="#">My Appointments </a>-->
+                <!--                </li>-->
             </ul>
             <div>
-                <a class="nav-link text-white" href="appointment_creation">New appointment</a>
+                <a class="nav-link text-white" href="/appointment_creation">New appointment</a>
             </div>
         </div>
     </div>
 </nav>
 
-</div><div class="container my-5 p-5" style="border:1px solid black;">
+<div class="container my-5 p-5" style="border:1px solid black;">
     <h4 class="text-center">Edit Appointment</h4>
     <form class="col-md-4 offset-md-4" th:action="@{/save}" method="post" th:object="${appointment}">
 
