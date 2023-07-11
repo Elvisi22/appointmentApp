@@ -3,7 +3,6 @@ package com.vccaplication.vccapplication.service;
 import com.vccaplication.vccapplication.entitiy.Appointment;
 import com.vccaplication.vccapplication.repository.AppointmentRepository;
 import com.vccaplication.vccapplication.repository.UserRepository;
-import lombok.extern.log4j.Log4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Log4j
+
 public class AppointmentService {
     Logger LOG=  LoggerFactory.getLogger(AppointmentService.class);
     @Autowired
