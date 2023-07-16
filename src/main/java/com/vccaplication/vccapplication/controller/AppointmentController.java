@@ -40,12 +40,6 @@ public class AppointmentController {
     }
 
 
-//    @GetMapping("/all_appointmentsAdmin")
-//    public ModelAndView getAllAppointmentsAdmin() {
-//        List<Appointment> list = service.getAllAppointments();
-//        return new ModelAndView("appointmentList", "appointment", list);
-//    }
-
 
     @GetMapping("/all_appointments")
     public ModelAndView getAllAppointments() {

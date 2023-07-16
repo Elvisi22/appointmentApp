@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
@@ -48,6 +49,22 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
+
+
+
+    public void updateUser(User user){
+        try{
+            userRepository.save(user);
+
+        }catch (Exception e){
+            e.getMessage();
+        }
+    }
+
+    public User update(User newUser) {
+        return userRepository.save(newUser);
+    }
+
     @Override
     public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
@@ -60,6 +77,16 @@ public class UserServiceImpl implements UserService {
                 .map((user) -> mapToUserDto(user))
                 .collect(Collectors.toList());
     }
+
+//    @Override
+//    public List<UserDto> findByRoles(Long id) {
+//        List<User> users = (List<User>) userRepository.findByRoles(1L);
+//        return users.stream()
+//                .map((user) -> mapToUserDto(user))
+//                .collect(Collectors.toList());
+//    }
+
+
 
     private UserDto mapToUserDto(User user){
         UserDto userDto = new UserDto();
@@ -86,4 +113,11 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByEmail(auth);
         return user;
     }
+
+    @Override
+    public void deleteByEmail(String email) {
+        userRepository.delete(userRepository.findByEmail(email));
+    }
+
+
 }
